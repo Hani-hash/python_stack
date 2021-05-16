@@ -19,15 +19,19 @@ class User:
 
 
 class BankAccount:
-    def __init__(self, int_rate, balance): 
-        self.int_rate = 0.01
-        self.balance=balance
+    def __init__(self, int_rate=0.01, balance): 
+        self.int_rate = int_rate
+        self.balance = balance
 
     def deposit(self, amount):
         self.balance += amount
         return self
     def withdraw(self, amount):
-        self.balance -= amount
+        if amount<self.balance:
+            self.balance -= amount
+        else:
+            self.balance -= 5
+            print ("Insufficient funds: Charging a $5 fee")
         return self
     def display_account_info(self):
         print(f"Balance: {self.balance}")
@@ -44,5 +48,3 @@ nizam = BankAccount(0.01,1230)
 Hani.deposit(1000).deposit(1000).deposit(1000).withdraw(1500).yield_interest().display_account_info()
 nizam.deposit(9800).deposit(10700).withdraw(500).withdraw(500).withdraw(500).withdraw(500).yield_interest().display_account_info()
 
-#make 2 deposits and 4 withdrawals, then yield interest and display the account's info all in one line of code
-#, make 3 deposits and 1 withdrawal, then yield interest and display the account's info all in one line of code

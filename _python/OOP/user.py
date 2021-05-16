@@ -1,7 +1,6 @@
-class User:
-    def init(self, name, email):
+class user:
+    def __init__(self, name):
         self.name = name
-        self.email = email
         self.account_balance = 0
     def make_deposit(self, amount):
         self.account_balance += amount
@@ -13,16 +12,28 @@ class User:
         self.account_balance -= amount
         other_user.account_balance += amount
 
-lana = User("lana","lanamail")
-nizam = User("nizam","nizamra")
-lana.make_deposit(9720)
-lana.display_user_balance()
-nizam.make_deposit(720)
+Hani = user("Hani")
+Hani.make_deposit(11100)
+Hani.make_deposit(540)
+Hani.make_deposit(200)
+Hani.make_withdrawal(220)
+Hani.display_user_balance()
+
+nizam = user("nizam")
+nizam.make_deposit(500)
+nizam.make_deposit(150)
+nizam.make_withdrawal(320)
+nizam.make_withdrawal(700)
 nizam.display_user_balance()
-lana.transfer_money(nizam,4000)
-lana.make_deposit(1200)
-print(lana.account_balance)
-lana.make_withdrawal(2600)
-print("after withdrw",lana.account_balance)
-lana.display_user_balance()
+
+Hala = user("Hala")
+Hala.make_deposit(1000)
+Hala.make_deposit(400)
+Hala.make_withdrawal(50)
+Hala.make_withdrawal(50)
+Hala.display_user_balance()
+
+
+nizam.transfer_money(Hani, 400)
+Hani.display_user_balance()
 nizam.display_user_balance()
