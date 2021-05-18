@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function startTime() {
+          var today = new Date();
+          var h = today.getHours();
+          var m = today.getMinutes();
+          var s = today.getSeconds();
+          var d = today.getDate();
+          var f = today.getMonth();
+          var y = today.getUTCFullYear();
+          m = checkTime(m);
+          s = checkTime(s);
+          document.getElementById('txt').innerHTML =
+          h + ":" + m + ":" + s +" // " + d + "/" + f + "/" + y;
+          var t = setTimeout(startTime, 1000);
+        }
+        function checkTime(i) {
+          if (i < 10) {i = "0" + i};  // add zero in front of numbers < 10
+          return i;
+        }
+        </script>
+        </head>
+        
+        <body style= "text-align: center; font-size: 55px;" onload="startTime()">
+        
+        <div id="txt"></div>
+
+    
+    
+</body>
+</html>
