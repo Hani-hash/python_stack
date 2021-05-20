@@ -1,0 +1,257 @@
+Microsoft Windows [Version 10.0.19041.985]
+(c) Microsoft Corporation. All rights reserved.
+
+C:\Users\Microsoft\Desktop\Axsos\python_stack\my_environments>call C:\Users\Microsoft\Desktop\Axsos\python_stack\my_environments avtivate
+'C:\Users\Microsoft\Desktop\Axsos\python_stack\my_environments' is not recognized as an internal or external command,
+operable program or batch file.
+
+C:\Users\Microsoft\Desktop\Axsos\python_stack\my_environments>call djangoPy3Env\Scripts\activate
+
+(djangoPy3Env) C:\Users\Microsoft\Desktop\Axsos\python_stack\my_environments>cd C:\Users\Microsoft\Desktop\Axsos\python_stack\django
+
+(djangoPy3Env) C:\Users\Microsoft\Desktop\Axsos\python_stack\django>python manage.py startproject orm_project
+C:\Users\Microsoft\AppData\Local\Programs\Python\Python39\python.exe: can't open file 'C:\Users\Microsoft\Desktop\Axsos\python_stack\django\manage.py': [Errno 2] No such file or directory
+
+(djangoPy3Env) C:\Users\Microsoft\Desktop\Axsos\python_stack\django>django-admin startproject orm_project
+
+(djangoPy3Env) C:\Users\Microsoft\Desktop\Axsos\python_stack\django>call orm_project
+'orm_project' is not recognized as an internal or external command,
+operable program or batch file.
+
+(djangoPy3Env) C:\Users\Microsoft\Desktop\Axsos\python_stack\django>cd orm_project
+
+(djangoPy3Env) C:\Users\Microsoft\Desktop\Axsos\python_stack\django\orm_project>python manage.py runserver
+Watching for file changes with StatReloader
+Performing system checks...
+
+System check identified no issues (0 silenced).
+
+You have 18 unapplied migration(s). Your project may not work properly until you apply the migrations for app(s): admin, auth, contenttypes, sessions.
+Run 'python manage.py migrate' to apply them.
+May 20, 2021 - 11:28:19
+Django version 3.2.3, using settings 'orm_project.settings'
+Starting development server at http://127.0.0.1:8000/
+Quit the server with CTRL-BREAK.
+
+(djangoPy3Env) C:\Users\Microsoft\Desktop\Axsos\python_stack\django\orm_project>python manage.py startapp orm_app
+
+(djangoPy3Env) C:\Users\Microsoft\Desktop\Axsos\python_stack\django\orm_project>code .
+
+(djangoPy3Env) C:\Users\Microsoft\Desktop\Axsos\python_stack\django\orm_project>python manage.py mkmigration
+Unknown command: 'mkmigration'. Did you mean makemigrations?
+Type 'manage.py help' for usage.
+
+(djangoPy3Env) C:\Users\Microsoft\Desktop\Axsos\python_stack\django\orm_project>python manage.py mkmigrations
+Unknown command: 'mkmigrations'. Did you mean makemigrations?
+Type 'manage.py help' for usage.
+
+(djangoPy3Env) C:\Users\Microsoft\Desktop\Axsos\python_stack\django\orm_project>python manage.py makemigrations
+Traceback (most recent call last):
+  File "C:\Users\Microsoft\Desktop\Axsos\python_stack\django\orm_project\manage.py", line 22, in <module>
+    main()
+  File "C:\Users\Microsoft\Desktop\Axsos\python_stack\django\orm_project\manage.py", line 18, in main
+    execute_from_command_line(sys.argv)
+  File "C:\Users\Microsoft\Desktop\Axsos\python_stack\my_environments\djangoPy3Env\lib\site-packages\django\core\management\__init__.py", line 419, in execute_from_command_line
+    utility.execute()
+  File "C:\Users\Microsoft\Desktop\Axsos\python_stack\my_environments\djangoPy3Env\lib\site-packages\django\core\management\__init__.py", line 413, in execute
+    self.fetch_command(subcommand).run_from_argv(self.argv)
+  File "C:\Users\Microsoft\Desktop\Axsos\python_stack\my_environments\djangoPy3Env\lib\site-packages\django\core\management\base.py", line 354, in run_from_argv
+    self.execute(*args, **cmd_options)
+  File "C:\Users\Microsoft\Desktop\Axsos\python_stack\my_environments\djangoPy3Env\lib\site-packages\django\core\management\base.py", line 393, in execute
+    self.check()
+  File "C:\Users\Microsoft\Desktop\Axsos\python_stack\my_environments\djangoPy3Env\lib\site-packages\django\core\management\base.py", line 419, in check
+    all_issues = checks.run_checks(
+  File "C:\Users\Microsoft\Desktop\Axsos\python_stack\my_environments\djangoPy3Env\lib\site-packages\django\core\checks\registry.py", line 76, in run_checks
+    new_errors = check(app_configs=app_configs, databases=databases)
+  File "C:\Users\Microsoft\Desktop\Axsos\python_stack\my_environments\djangoPy3Env\lib\site-packages\django\core\checks\urls.py", line 13, in check_url_config
+    return check_resolver(resolver)
+  File "C:\Users\Microsoft\Desktop\Axsos\python_stack\my_environments\djangoPy3Env\lib\site-packages\django\core\checks\urls.py", line 23, in check_resolver
+    return check_method()
+  File "C:\Users\Microsoft\Desktop\Axsos\python_stack\my_environments\djangoPy3Env\lib\site-packages\django\urls\resolvers.py", line 412, in check
+    for pattern in self.url_patterns:
+  File "C:\Users\Microsoft\Desktop\Axsos\python_stack\my_environments\djangoPy3Env\lib\site-packages\django\utils\functional.py", line 48, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+  File "C:\Users\Microsoft\Desktop\Axsos\python_stack\my_environments\djangoPy3Env\lib\site-packages\django\urls\resolvers.py", line 598, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+  File "C:\Users\Microsoft\Desktop\Axsos\python_stack\my_environments\djangoPy3Env\lib\site-packages\django\utils\functional.py", line 48, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+  File "C:\Users\Microsoft\Desktop\Axsos\python_stack\my_environments\djangoPy3Env\lib\site-packages\django\urls\resolvers.py", line 591, in urlconf_module
+    return import_module(self.urlconf_name)
+  File "C:\Users\Microsoft\AppData\Local\Programs\Python\Python39\lib\importlib\__init__.py", line 127, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 1030, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1007, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 986, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 680, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 855, in exec_module
+  File "<frozen importlib._bootstrap>", line 228, in _call_with_frames_removed
+  File "C:\Users\Microsoft\Desktop\Axsos\python_stack\django\orm_project\orm_project\urls.py", line 20, in <module>
+    path('', include('orm_app.urls')),
+  File "C:\Users\Microsoft\Desktop\Axsos\python_stack\my_environments\djangoPy3Env\lib\site-packages\django\urls\conf.py", line 34, in include
+    urlconf_module = import_module(urlconf_module)
+  File "C:\Users\Microsoft\AppData\Local\Programs\Python\Python39\lib\importlib\__init__.py", line 127, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 1030, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1007, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 986, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 680, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 855, in exec_module
+  File "<frozen importlib._bootstrap>", line 228, in _call_with_frames_removed
+  File "C:\Users\Microsoft\Desktop\Axsos\python_stack\django\orm_project\orm_app\urls.py", line 5, in <module>
+    path('', views.index),
+AttributeError: module 'orm_app.views' has no attribute 'index'
+
+(djangoPy3Env) C:\Users\Microsoft\Desktop\Axsos\python_stack\django\orm_project>python manage.py makemigrations
+Migrations for 'orm_app':
+  orm_app\migrations\0001_initial.py
+    - Create model Users
+
+(djangoPy3Env) C:\Users\Microsoft\Desktop\Axsos\python_stack\django\orm_project>python manage.py migrate
+Operations to perform:
+  Apply all migrations: admin, auth, contenttypes, orm_app, sessions
+Running migrations:
+  Applying contenttypes.0001_initial... OK
+  Applying auth.0001_initial... OK
+  Applying admin.0001_initial... OK
+  Applying admin.0002_logentry_remove_auto_add... OK
+  Applying admin.0003_logentry_add_action_flag_choices... OK
+  Applying contenttypes.0002_remove_content_type_name... OK
+  Applying auth.0002_alter_permission_name_max_length... OK
+  Applying auth.0003_alter_user_email_max_length... OK
+  Applying auth.0004_alter_user_username_opts... OK
+  Applying auth.0005_alter_user_last_login_null... OK
+  Applying auth.0006_require_contenttypes_0002... OK
+  Applying auth.0007_alter_validators_add_error_messages... OK
+  Applying auth.0008_alter_user_username_max_length... OK
+  Applying auth.0009_alter_user_last_name_max_length... OK
+  Applying auth.0010_alter_group_name_max_length... OK
+  Applying auth.0011_update_proxy_permissions... OK
+  Applying auth.0012_alter_user_first_name_max_length... OK
+  Applying orm_app.0001_initial... OK
+  Applying sessions.0001_initial... OK
+
+(djangoPy3Env) C:\Users\Microsoft\Desktop\Axsos\python_stack\django\orm_project>python manage.py shell
+Python 3.9.5 (tags/v3.9.5:0a7dcbd, May  3 2021, 17:27:52) [MSC v.1928 64 bit (AMD64)] on win32
+Type "help", "copyright", "credits" or "license" for more information.
+(InteractiveConsole)
+>>> from orm_app.models import *
+>>> users.objects.create(frist_name = "Hani", last_name = "Khamees", email = "hani.ikhmais@gmail.com", age = 28)
+Traceback (most recent call last):
+  File "<console>", line 1, in <module>
+NameError: name 'users' is not defined
+>>> Users.objects.create(frist_name = "Hani", last_name = "Khamees", email = "hani.ikhmais@gmail.com", age = 28)
+Traceback (most recent call last):
+  File "<console>", line 1, in <module>
+  File "C:\Users\Microsoft\Desktop\Axsos\python_stack\my_environments\djangoPy3Env\lib\site-packages\django\db\models\manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "C:\Users\Microsoft\Desktop\Axsos\python_stack\my_environments\djangoPy3Env\lib\site-packages\django\db\models\query.py", line 451, in create
+    obj = self.model(**kwargs)
+  File "C:\Users\Microsoft\Desktop\Axsos\python_stack\my_environments\djangoPy3Env\lib\site-packages\django\db\models\base.py", line 503, in __init__
+    raise TypeError("%s() got an unexpected keyword argument '%s'" % (cls.__name__, kwarg))
+TypeError: Users() got an unexpected keyword argument 'frist_name'
+>>> Users.objects.create(first_name = "Hani", last_name = "Khamees", email = "hani.ikhmais@gmail.com", age = 28)
+Traceback (most recent call last):
+  File "<console>", line 1, in <module>
+  File "C:\Users\Microsoft\Desktop\Axsos\python_stack\my_environments\djangoPy3Env\lib\site-packages\django\db\models\manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "C:\Users\Microsoft\Desktop\Axsos\python_stack\my_environments\djangoPy3Env\lib\site-packages\django\db\models\query.py", line 451, in create
+    obj = self.model(**kwargs)
+  File "C:\Users\Microsoft\Desktop\Axsos\python_stack\my_environments\djangoPy3Env\lib\site-packages\django\db\models\base.py", line 503, in __init__
+    raise TypeError("%s() got an unexpected keyword argument '%s'" % (cls.__name__, kwarg))
+TypeError: Users() got an unexpected keyword argument 'email'
+>>> Users.objects.create(first_name = "Hani", last_name = "Khamees", email_address = "hani.ikhmais@gmail.com", age = 28)
+<Users: Users object (1)>
+>>> Users.objects.create(first_name = "Momen", last_name = "Kitanneh", email_address = "Momen.kittaneh93@gmail.com", age = 28)
+<Users: Users object (2)>
+>>> users.objects.create(frist_name = "Abdullah", last_name = "Qasem", email = "Abdullah.Qasem@gmail.com", age = 26)
+Traceback (most recent call last):
+  File "<console>", line 1, in <module>
+NameError: name 'users' is not defined
+>>> Users.objects.create(frist_name = "Abdullah", last_name = "Qasem", email = "Abdullah.Qasem@gmail.com", age = 26)
+Traceback (most recent call last):
+  File "<console>", line 1, in <module>
+  File "C:\Users\Microsoft\Desktop\Axsos\python_stack\my_environments\djangoPy3Env\lib\site-packages\django\db\models\manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "C:\Users\Microsoft\Desktop\Axsos\python_stack\my_environments\djangoPy3Env\lib\site-packages\django\db\models\query.py", line 451, in create
+    obj = self.model(**kwargs)
+  File "C:\Users\Microsoft\Desktop\Axsos\python_stack\my_environments\djangoPy3Env\lib\site-packages\django\db\models\base.py", line 503, in __init__
+    raise TypeError("%s() got an unexpected keyword argument '%s'" % (cls.__name__, kwarg))
+TypeError: Users() got an unexpected keyword argument 'frist_name'
+>>> Users.objects.create(first_name = "Abdullah", last_name = "Qasem", email_address = "Abdullah.Qasem@gmail.com", age = 26)
+<Users: Users object (3)>
+>>> cohort=Users.objects.all
+>>>
+>>> print(cohort)
+<bound method BaseManager.all of <django.db.models.manager.Manager object at 0x00000228E8867E80>>
+>>> Users.object.all
+Traceback (most recent call last):
+  File "<console>", line 1, in <module>
+AttributeError: type object 'Users' has no attribute 'object'
+>>> Users.objects.all
+<bound method BaseManager.all of <django.db.models.manager.Manager object at 0x00000228E8867E80>>
+>>> Users.objects.all()
+<QuerySet [<Users: Users object (1)>, <Users: Users object (2)>, <Users: Users object (3)>]>
+>>> Users.objects.all().vlaues()
+Traceback (most recent call last):
+  File "<console>", line 1, in <module>
+AttributeError: 'QuerySet' object has no attribute 'vlaues'
+>>> Users.objects.all().values()
+<QuerySet [{'id': 1, 'first_name': 'Hani', 'last_name': 'Khamees', 'email_address': 'hani.ikhmais@gmail.com', 'age': 28, 'created_at': datetime.datetime(2021, 5, 20, 11, 4, 25, 198246, tzinfo=<UTC>), 'updated_at': datetime.datetime(2021, 5, 20, 11, 4, 25, 198246, tzinfo=<UTC>)}, {'id': 2, 'first_name': 'Momen', 'last_name': 'Kitanneh', 'email_address': 'Momen.kittaneh93@gmail.com', 'age': 28, 'created_at': datetime.datetime(2021, 5, 20, 11, 5, 26, 597881, tzinfo=<UTC>), 'updated_at': datetime.datetime(2021, 5, 20, 11, 5, 26, 597881, tzinfo=<UTC>)}, {'id': 3, 'first_name': 'Abdullah', 'last_name': 'Qasem', 'email_address': 'Abdullah.Qasem@gmail.com', 'age': 26, 'created_at': datetime.datetime(2021, 5, 20, 11, 7, 54, 137852, tzinfo=<UTC>), 'updated_at': datetime.datetime(2021, 5, 20, 11, 7, 54, 137852, tzinfo=<UTC>)}]>
+>>> Users.objects.get(id=1).__dict__
+{'_state': <django.db.models.base.ModelState object at 0x00000228E8905E50>, 'id': 1, 'first_name': 'Hani', 'last_name': 'Khamees', 'email_address': 'hani.ikhmais@gmail.com', 'age': 28, 'created_at': datetime.datetime(2021, 5, 20, 11, 4, 25, 198246, tzinfo=<UTC>), 'updated_at': datetime.datetime(2021, 5, 20, 11, 4, 25, 198246, tzinfo=<UTC>)}
+>>> Users.objects.get(id=3).__dict__
+{'_state': <django.db.models.base.ModelState object at 0x00000228E8905B80>, 'id': 3, 'first_name': 'Abdullah', 'last_name': 'Qasem', 'email_address': 'Abdullah.Qasem@gmail.com', 'age': 26, 'created_at': datetime.datetime(2021, 5, 20, 11, 7, 54, 137852, tzinfo=<UTC>), 'updated_at': datetime.datetime(2021, 5, 20, 11, 7, 54, 137852, tzinfo=<UTC>)}
+>>> upd=Users.objects.get(id=3)
+>>> upd.last_name = "pancakes"
+>>> upd.save
+<bound method Model.save of <Users: Users object (3)>>
+>>> upd.save()
+>>> del = Users.objects.get(id=2)
+  File "<console>", line 1
+    del = Users.objects.get(id=2)
+        ^
+SyntaxError: invalid syntax
+>>> cohort = Users.objects.get(id=2)
+>>> cohort.delete()
+(1, {'orm_app.Users': 1})
+>>> Users.objects.create(first_name = "Hani", last_name = "Khamees", email_address = "hani.ikhmais@gmail.com", age = 28)
+<Users: Users object (4)>
+>>> Users.objects.create(first_name = "Momen", last_name = "Kitanneh", email_address = "Momen.kittaneh93@gmail.com", age = 28)
+<Users: Users object (5)>
+>>> Users.objects.create(first_name = "Abdullah", last_name = "Qasem", email_address = "Abdullah.Qasem@gmail.com", age = 26)
+<Users: Users object (6)>
+>>> Users.objects.all().vlaues()
+Traceback (most recent call last):
+  File "<console>", line 1, in <module>
+AttributeError: 'QuerySet' object has no attribute 'vlaues'
+>>> Users.objects.all().values()
+<QuerySet [{'id': 1, 'first_name': 'Hani', 'last_name': 'Khamees', 'email_address': 'hani.ikhmais@gmail.com', 'age': 28, 'created_at': datetime.datetime(2021, 5, 20, 11, 4, 25, 198246, tzinfo=<UTC>), 'updated_at': datetime.datetime(2021, 5, 20, 11, 4, 25, 198246, tzinfo=<UTC>)}, {'id': 3, 'first_name': 'Abdullah', 'last_name': 'pancakes', 'email_address': 'Abdullah.Qasem@gmail.com', 'age': 26, 'created_at': datetime.datetime(2021, 5, 20, 11, 7, 54, 137852, tzinfo=<UTC>), 'updated_at': datetime.datetime(2021, 5, 20, 11, 21, 28, 100830, tzinfo=<UTC>)}, {'id': 4, 'first_name': 'Hani', 'last_name': 'Khamees', 'email_address': 'hani.ikhmais@gmail.com', 'age': 28, 'created_at': datetime.datetime(2021, 5, 20, 11, 31, 41, 665670, tzinfo=<UTC>), 'updated_at': datetime.datetime(2021, 5, 20, 11, 31, 41, 665670, tzinfo=<UTC>)}, {'id': 5, 'first_name': 'Momen', 'last_name': 'Kitanneh', 'email_address': 'Momen.kittaneh93@gmail.com', 'age': 28, 'created_at': datetime.datetime(2021, 5, 20, 11, 31, 45, 135825, tzinfo=<UTC>), 'updated_at': datetime.datetime(2021, 5, 20, 11, 31, 45, 135825, tzinfo=<UTC>)}, {'id': 6, 'first_name': 'Abdullah', 'last_name': 'Qasem', 'email_address': 'Abdullah.Qasem@gmail.com', 'age': 26, 'created_at': datetime.datetime(2021, 5, 20, 11, 31, 49, 284982, tzinfo=<UTC>), 'updated_at': datetime.datetime(2021, 5, 20, 11, 31, 49, 284982, tzinfo=<UTC>)}]>
+>>> upd=Users.objects.get(id=3)
+>>> upd.last_name = "pancakes"
+>>> del = Users.objects.get(id=2)
+  File "<console>", line 1
+    del = Users.objects.get(id=2)
+        ^
+SyntaxError: invalid syntax
+>>> Users.objects.first().value()
+Traceback (most recent call last):
+  File "<console>", line 1, in <module>
+AttributeError: 'Users' object has no attribute 'value'
+>>> Users.objects.first().values()
+Traceback (most recent call last):
+  File "<console>", line 1, in <module>
+AttributeError: 'Users' object has no attribute 'values'
+>>> firstU= Users.objects.first()
+>>> fisrtU.value()
+Traceback (most recent call last):
+  File "<console>", line 1, in <module>
+NameError: name 'fisrtU' is not defined
+>>> fisrtU.values()
+Traceback (most recent call last):
+  File "<console>", line 1, in <module>
+NameError: name 'fisrtU' is not defined
+>>> Users.objects.all().order_by("first_name",ASC)
+Traceback (most recent call last):
+  File "<console>", line 1, in <module>
+NameError: name 'ASC' is not defined
+>>> Users.objects.all().order_by("first_name")
