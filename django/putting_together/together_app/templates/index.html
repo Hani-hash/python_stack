@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>putting together project</title>
+</head>
+<style>
+table, th, td {
+    border: 1px solid black;
+    border-collapse: collapse;
+  }
+  th, td {
+    padding: 5px;
+  }
+  th {
+    text-align: left;
+  }
+</style>
+<body>
+    <h2 style="text-align: center;"> All The Users</h2>
+
+<table style="width:75%; margin-left: 10%;">
+
+  <tr>
+      <th>id</th>
+    <th>Name</th>
+    <th>Email</th> 
+    <th>Age</th>
+  </tr>
+  {%for i in cohort%}
+
+  <tr>
+    <td>{{i.id}}</td>
+    <td>{{i.first_name}} {{i.last_name}} </td>
+    <td>{{i.email_address}} </td>
+    <td>{{i.age}} </td>
+  </tr>
+  {%endfor%}
+  
+</table>
+<hr>
+<br> <br> <br> 
+  <form action="adduser" method="POST">
+      {% csrf_token %}
+      <label for="first">First Name</label>
+      <input type="text" name="name">
+      <label for="first"> Last Name</label>
+      <input type="text" name="last">
+      <label for="first">Email</label>
+      <input type="text" name="email">
+      <label for="first">Age</label>
+      <input type="text" name="age">
+      <input type="submit" value="submit">
+  </form>
+
+
+</body>
+</html>
