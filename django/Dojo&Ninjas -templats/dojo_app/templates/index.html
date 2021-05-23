@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="container" >
+        <div class="upper_header" style="display:flex;justify-content: space-around;">
+            <div class="left_header">
+                <h1>Add a Dojo</h1>
+                <table>
+                    <form action="add_dojo" method="POST">
+                        {% csrf_token %}
+                        <tr>
+                            <td><label for="name">Name:</label></td>
+                            <td><input type="text" id="name" name="name"></td>
+                        </tr>
+                        <tr>
+                            <td><label for="city">City:</label></td>
+                            <td><input type="text" id="city" name="city"></td>
+                        </tr>
+                        <tr>
+                            <td><label for="state">State:</label></td>
+                            <td><input type="text" id="state" name="state"></td>
+                        </tr>
+                        <tr>
+                            <td><input type="submit" value="Add"></td>
+                        </tr>
+                    </form>
+                </table>
+            </div>
+            <div class="left_header">
+                <h1>Add a Ninja</h1>
+                <table>
+                    <form action="insert_ninja" method="POST">
+                        {% csrf_token %}
+                        <tr>
+                            <td><label for="name">First Name:</label></td>
+                            <td><input type="text" id="name" name="first_name"></td>
+                        </tr>
+                        <tr>
+                            <td><label for="city">Last Name:</label></td>
+                            <td><input type="text" id="city" name="last_name"></td>
+                        </tr>
+                        <tr>
+                            <td><label for="state">Dojo:</label></td>
+                            <td><select name="ninjaa">
+                                {% for i in dojoos %}
+                                <option >{{i.name}}</option>
+                                {% endfor %}
+                              </select></td>
+                        </tr>
+                        <tr>
+                            <td><input type="submit" value="Add"></td>
+                        </tr>
+                    </form>
+                </table>
+            </div>
+        </div>
+        <hr>
+        <center>
+            <h1>Author List</h1>
+            <ul>
+            {% for i in dojoos %}
+                <li>{{i.name}}
+                <ul>
+                        {% for x in i.koko.all %}	
+                    <li><em>{{x.first_name}} {{x.last_name}}</em></li>
+                        {% endfor %}
+                </ul>
+                </li>
+            {% endfor %}
+            </ul>
+        </center>
+        
+    </div>
+</body>
+</html>
