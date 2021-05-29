@@ -1,0 +1,30 @@
+h1 {
+  background-color: red;
+}
+textarea {
+  width: 200px;
+  height: 100px;
+}
+.a {
+  margin-bottom: 45px;
+}
+
+.container {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+.right {
+  margin: 20px;
+}
+.right_table tr td {
+  border: 2px solid black;
+  padding: 10px;
+  vertical-align: bottom;
+}
+.right_table {
+  border-collapse: collapse;
+}
+.a {
+  vertical-align: top;
+}

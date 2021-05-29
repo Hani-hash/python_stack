@@ -1,0 +1,12 @@
+.le{
+    float: left;
+}
+
+.ri{
+    float: right;
+}
+
+.container{
+display: flex;
+justify-content: space-between;
+}
